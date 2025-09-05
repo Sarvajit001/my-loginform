@@ -1,0 +1,248 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000000;      
+}
+
+
+.stopwatch-container {
+background: linear-gradient(145deg, rgba(30,30,47,0.95), rgba(5, 68, 78, 0.95));
+  backdrop-filter: blur(8px);
+  color: #f5f5f5;
+  width: 100%;
+  height: 100vh;
+  padding: 117px;
+  border-radius: 15px;
+  align-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6), 0 4px 6px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+
+}
+
+.stopwatch-wrapper{
+display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #abffff24;
+  padding: 93px;
+  /* border-radius: 50% 20% / 30% 60%; */
+  border-radius: 50%;
+
+}
+
+.stopwatch-wrapper h2 {
+  font-family: 'Orbitron', sans-serif;   /* Futuristic digital font */
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #00eaff;  /* Neon cyan effect */
+  text-shadow: 0 0 8px rgba(0, 234, 255, 0.7), 
+               0 0 15px rgba(0, 234, 255, 0.5);
+  margin-bottom: 20px;
+}
+
+.stopwatch-wrapper h1 {
+  font-family: 'Orbitron', sans-serif;  /* Digital futuristic font */
+  font-size: 3rem;                      /* Big & bold */
+  font-weight: 900;
+  color: #000000;                       /* Neon cyan color */
+  text-align: center;
+  margin: 20px 0;
+
+  /* Glowing digital effect 60*/
+  text-shadow: 
+    0 0 5px #00ffcc,
+    0 0 10px #00ffcc,
+    0 0 30px #00ffcc,
+    0 0 60px #00ffcc;
+}   
+
+.button-group{
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+
+/* Extra Large Devices (≥1200px like big desktops) */
+@media screen and (max-width: 1200px) {
+  .stopwatch-container {
+    width: 70rem;
+    height: 32rem;
+    padding: 90px;
+  }
+  .stopwatch-wrapper {
+    padding: 80px;
+  }
+}
+
+/* Large Devices (≥992px up to <1200px, like laptops) */
+@media screen and (max-width: 992px) {
+  .stopwatch-container {
+    width: 55rem;
+    height: 28rem;
+    padding: 70px;
+  }
+  .stopwatch-wrapper {
+    padding: 70px;
+  }
+}
+
+/* Medium Devices (≥768px up to <992px, tablets & iPad landscape) */
+@media screen and (max-width: 768px) {
+  .stopwatch-container {
+    width: 90%;
+    height: auto;
+    padding: 50px;
+  }
+  .stopwatch-wrapper {
+    padding: 50px;
+  }
+  .button-group {
+    flex-direction: row;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+}
+
+/* Small Devices (≥576px up to <768px, iPad portrait / Kindle) */
+@media screen and (max-width: 576px) {
+  .stopwatch-container {
+    width: 95%;
+    height: auto;
+    padding: 30px;
+  }
+  .stopwatch-wrapper {
+    padding: 40px;
+    border-radius: 20px; /* avoid too big circle on small devices */
+  }
+  .button-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* For Small Devices (mobile, <576px) */
+@media screen and (max-width: 576px) {
+.stopwatch-container {
+  position: fixed;
+  width: 100vw;       /* Full screen width */
+  height: 100vh;      /* Full screen height */
+  padding: 20px;      /* Reduce padding */
+  border-radius: 0;   /* Fullscreen – no rounded edges */
+  top: 0;
+  left: 0;
+
+  /* Black glassy gradient */
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.9),
+    rgba(30, 30, 30, 0.6)
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  /* Subtle glassy shadow for depth */
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.8),
+    inset 0 2px 8px rgba(255, 255, 255, 0.05);
+
+  color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  .stopwatch-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  /* Glassy black gradient */
+  background: linear-gradient(
+    145deg,
+    rgba(20, 20, 20, 0.85),
+    rgba(40, 40, 40, 0.55)
+  );
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  padding: 60px;
+  border-radius: 20px;
+
+  /* Soft shadows for depth */
+  box-shadow:
+    0 6px 15px rgba(0, 0, 0, 0.7),
+    inset 0 2px 6px rgba(255, 255, 255, 0.05);
+
+  color: #f5f5f5;
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+}
+
+
+  .button-group {
+    flex-direction: column; /* Stack buttons */
+    gap: 15px;
+    width: 100%;
+  }
+
+  .button-group button {
+    width: 100%;  /* Buttons stretch across the screen */
+  }
+}
+
+
+
+/* 📱 Mobile devices (small screens like iPhone, Android) */
+@media (max-width: 480px) {
+  .stopwatch-wrapper h2 {
+    font-size: 1.4rem;   /* smaller title */
+    letter-spacing: 2px;
+  }
+  .stopwatch-wrapper h1 {
+    font-size: 2rem;   /* smaller timer */
+    color: #f5f5f5;
+    text-shadow: 0 0 5px #66dbc3, 0 0 10px #046a56, 0 0 30px #00b28e, 0 0 60px #00ba95;
+  }
+}
+
+/* 📲 Tablets (iPad, Kindle, medium screens) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .stopwatch-wrapper h2 {
+    font-size: 1.8rem;
+  }
+  .stopwatch-wrapper h1 {
+    font-size: 3rem;
+  }
+}
+
+/* 💻 Laptops / small desktops */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .stopwatch-wrapper h2 {
+    font-size: 2rem;
+  }
+  .stopwatch-wrapper h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* 🖥️ Large desktops / wide screens */
+@media (min-width: 1201px) {
+  .stopwatch-wrapper h2 {
+    font-size: 2.4rem;
+  }
+  .stopwatch-wrapper h1 {
+    font-size: 4.5rem;
+  }
+}

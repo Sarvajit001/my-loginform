@@ -1,0 +1,103 @@
+.home-section {
+  width: 100vw;                /* full width */
+  min-height: 100vh;           /* full height */
+  position: fixed;
+  margin: 0;
+  top: 0;
+  left: 0;
+  
+  /* Glassy dark brown gradient background */
+background: linear-gradient(
+  135deg,
+  rgba(35, 0, 111, 0.85) 0%,       /* deep blue-purple */
+  rgba(98, 204, 221, 0.7) 50%,     /* bright cyan-blue */
+  rgba(92, 12, 159, 0.85) 100%     /* rich purple */
+);
+  backdrop-filter: blur(12px);          /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(12px);  /* Safari support */
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  color: #e0c097;                       /* Light sandy text color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1;                          /* Ensure it sits above other elements */
+}
+
+
+.page-title {
+  text-shadow: 0 0 10px #00eaff;
+}
+
+
+
+.task-card {
+  width: 100%;               /* stretch full width */
+  max-width: 600px;          /* limit max width on large screens */
+  margin: 0 auto;            /* center card horizontally */
+  background: linear-gradient(
+    135deg,
+    #222222 0%,
+    #1a1a1a 60%,
+    #2b2b2b 100%
+  );                         /* subtle dark gradient background */
+  color: #00eaff;            /* vibrant accent neon blue */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* modern sans-serif font */
+  padding: 1.5rem 2rem;      /* comfortable spacing inside card */
+  border-radius: 12px;       /* smooth rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 234, 255, 0.35); /* soft glowing accent shadow */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.task-card:hover,
+.task-card:focus {
+  box-shadow: 0 8px 24px rgba(0, 234, 255, 0.6);
+  transform: translateY(-4px);
+  outline: none;
+}
+
+
+
+@media (max-width: 768px) {
+  .home-section {
+    /* Glassy brown gradient with transparent overlay for glass effect */
+    background: linear-gradient( 135deg, rgba(101, 67, 33, 0.85) 0%, rgba(198, 64, 0, 0.6) 60%, rgba(81, 45, 8, 0.85) 100% );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    color: #e0c097;
+  }
+
+  .page-title {
+    text-shadow: 0 0 8px #c9a76b;
+    font-size: 2rem;
+    font-family: 'Georgia', serif;
+    color: #f1e1c9;
+  }
+
+  .task-card {
+    background: linear-gradient(
+      145deg,
+      rgba(121, 85, 53, 0.9) 0%,        /* Medium brown transparent */
+      rgba(87, 59, 40, 0.95) 100%       /* Darker brown transparent */
+    );
+    color: #ffecb3;                     /* Warm creamy text */
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    padding: 1.2rem 2rem;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(78, 52, 31, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(78, 52, 31, 0.65);
+  }
+}
+
