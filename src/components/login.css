@@ -246,6 +246,11 @@ min-height: 70vh;
 
 /* Responsive Design */
 @media (max-width: 480px) {
+  .login-container{
+    position: fixed;
+  left: 7%;
+  top: 11%;
+  }
   .login-form-wrapper {
     padding: 24px;
     margin: 10px;

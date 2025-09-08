@@ -6,6 +6,8 @@ const Home = () => {
   const taskList = [
     { title: "Stopwatch Task", link: "/stopwatch" },
     { title: "Login Form Task", link: "/login" },
+    { title: "Accordion Task", link: "/AccordianData" },
+    { title: "React-Toast" ,link:"/toast"},
   ];
 
   return (

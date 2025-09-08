@@ -71,7 +71,7 @@ const Stopwatch = () => {
           </button>
         </div>
 
-         <Link to="/" className="btn btn-primary mt-3">
+        <Link to="/" className="btn btn-primary mt-3">
         Go Home
       </Link>
       </div>

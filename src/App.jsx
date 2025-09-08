@@ -7,6 +7,8 @@ import './App.css'
 import Home from './components/Home';
 import LoginForm from './components/LoginForm';
 import Stopwatch from './components//Stopwatch';
+import AccordionData from './components/AccordianData';
+import ToastContainer from './components/ToastContainer';
 // import Nav from './components/Nav';
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<LoginForm />} />
           <Route path="/stopwatch" element={<Stopwatch />} />
+          <Route path = "/AccordianData" element={<AccordionData/>}/>
+          <Route path = "/toast" element={<ToastContainer/>}/>
           
           {/* Add more routes later */}
         </Routes>
