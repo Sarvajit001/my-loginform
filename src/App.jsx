@@ -9,6 +9,7 @@ import LoginForm from './components/LoginForm';
 import Stopwatch from './components//Stopwatch';
 import AccordionData from './components/AccordianData';
 import ToastContainer from './components/ToastContainer';
+import SearchBar from './components/SearchBar';
 // import Nav from './components/Nav';
 
 function App() {
@@ -17,18 +18,19 @@ function App() {
   return (
     <>
        <Router>
-      <div className="app">
+          <div className="app">
       
         
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<LoginForm />} />
-          <Route path="/stopwatch" element={<Stopwatch />} />
-          <Route path = "/AccordianData" element={<AccordionData/>}/>
-          <Route path = "/toast" element={<ToastContainer/>}/>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<LoginForm />} />
+            <Route path="/stopwatch" element={<Stopwatch />} />
+            <Route path = "/AccordianData" element={<AccordionData/>}/>
+            <Route path = "/toast" element={<ToastContainer/>}/>
+            <Route path = "/searchBartask" element={<SearchBar/>}/>
           
           {/* Add more routes later */}
-        </Routes>
+          </Routes>
       </div>
     </Router>
     </>

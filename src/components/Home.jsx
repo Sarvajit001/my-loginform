@@ -8,6 +8,7 @@ const Home = () => {
     { title: "Login Form Task", link: "/login" },
     { title: "Accordion Task", link: "/AccordianData" },
     { title: "React-Toast" ,link:"/toast"},
+    { title:"SearchBar-Task",link:'/searchBartask'},
   ];
 
   return (
